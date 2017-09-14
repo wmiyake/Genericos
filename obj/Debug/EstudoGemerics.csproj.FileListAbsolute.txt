@@ -1,0 +1,7 @@
+C:\Users\Wellington Miyake\source\repos\CSharpintermediario\EstudoGemerics\bin\Debug\EstudoGemerics.exe.config
+C:\Users\Wellington Miyake\source\repos\CSharpintermediario\EstudoGemerics\bin\Debug\EstudoGemerics.exe
+C:\Users\Wellington Miyake\source\repos\CSharpintermediario\EstudoGemerics\bin\Debug\EstudoGemerics.pdb
+C:\Users\Wellington Miyake\source\repos\CSharpintermediario\EstudoGemerics\obj\Debug\EstudoGemerics.csprojResolveAssemblyReference.cache
+C:\Users\Wellington Miyake\source\repos\CSharpintermediario\EstudoGemerics\obj\Debug\EstudoGemerics.csproj.CoreCompileInputs.cache
+C:\Users\Wellington Miyake\source\repos\CSharpintermediario\EstudoGemerics\obj\Debug\EstudoGemerics.exe
+C:\Users\Wellington Miyake\source\repos\CSharpintermediario\EstudoGemerics\obj\Debug\EstudoGemerics.pdb

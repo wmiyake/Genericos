@@ -1,0 +1,164 @@
+// RepositorioGenerico.cs uma classe
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EstudoGemerics
+{
+    public class RepositorioGenerico<Ttipo>
+    {
+        private List<Ttipo> list;
+        public RepositorioGenerico()
+        {
+            list = new List<Ttipo>();
+        }
+
+        public List<Ttipo> Get()
+        {
+            return list;
+        }
+        public void Insert(Ttipo meuObjeto)
+        {
+            list.Add(meuObjeto);
+        }
+
+    }
+}
+
+//RepositorioAnimal.cs uma classe
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EstudoGemerics
+{
+    public class RepositorioAnimal
+    {
+        private List<Animal> animais;
+
+        public RepositorioAnimal()
+        {
+            animais = new List<Animal>();
+        }
+        public List <Animal> Get()
+        {
+            return animais;
+        }
+        public void Insert(Animal animal)
+        {
+            animais.Add(animal);
+        }
+    }
+}
+
+//RepositorioPessoa uma classe
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EstudoGemerics
+{
+    public class RepositorioPessoa
+    {
+        private List<Pessoa> pessoas;
+
+        public RepositorioPessoa()
+        {
+            pessoas = new List<Pessoa>();
+        }
+        public List <Pessoa> Get()
+        {
+            return pessoas;
+        }
+
+        public void Insert (Pessoa pessoa)
+        {
+            pessoas.Add(pessoa);
+        }
+    }
+}
+
+//Pessoa classe
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EstudoGemerics
+{
+    public class Pessoa
+    {
+        public int Id{ get; set; }
+        public string Nome { get; set; }
+    }
+}
+
+// Animal classe
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EstudoGemerics
+{
+    public class Animal
+    {
+        public int Id { get; set; }
+        public string Especie { get; set; }
+    }
+}
+
+
+/// Programa
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EstudoGemerics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Pessoa pessoa = new Pessoa
+            {
+                Id = 1,
+                Nome = "Wellington"
+            };
+            Animal animal = new Animal
+            {
+                Id = 1,
+                Especie = "Cachorro"
+            };
+            RepositorioPessoa repositorioPessoa = new RepositorioPessoa();
+            RepositorioAnimal repositorioAnimal = new RepositorioAnimal();
+            repositorioPessoa.Insert(pessoa);
+            repositorioAnimal.Insert(animal);
+            foreach (Pessoa p in repositorioPessoa.Get())
+            {
+                Console.WriteLine("Nome da pessoa: " + p.Nome);
+            }
+            foreach (Animal a in repositorioAnimal.Get())
+            {
+                Console.WriteLine("Especie do animal: " + a.Especie);
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
